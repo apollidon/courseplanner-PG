@@ -1,0 +1,64 @@
+
+
+body
+{
+    font-family: Raleway, sans-serif;
+    font-weight: 500;
+}
+
+header
+{
+    background-color: #F2F2F2;
+}
+
+a
+{
+    color: inherit;
+}
+
+#logo
+{
+    font-weight: 300;
+    font-family: 'roboto slab', sans-serif;
+    font-size: 20px;
+    text-transform: uppercase;
+    padding: 20px 0;
+}
+
+#logo span
+{
+    margin-left: -5px;
+}
+
+#logo span:first-child
+{
+    font-weight: bold;
+}
+
+#logo span:nth-child(2)
+{
+    font-weight: 100;
+}
+
+.menu
+{
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #4A4A4A;
+    text-transform: capitalize;;
+}
+
+.menu a:hover
+{
+    color: #8E8E8E;
+}
+
+main
+{
+    height: 100vh;
+    background-image: url('img/main-bg.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
