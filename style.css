@@ -4,6 +4,7 @@ body
 {
     font-family: Raleway, sans-serif;
     font-weight: 500;
+    font-size: 100%;
 }
 
 header
@@ -46,7 +47,7 @@ a
     font-size: 18px;
     font-weight: 600;
     color: #4A4A4A;
-    text-transform: capitalize;;
+    text-transform: capitalize;
 }
 
 .menu a:hover
@@ -64,44 +65,134 @@ main
     color: #fff;
 }
 
-main h2 {
+main h2
+{
     font-size: 48px;
     font-weight: bold;
 }
 
-main p {
+main p
+{
     font-size: 24px;
 }
 
-main .row {
-  height: 100vh;
-  display: flex;
-  align-items: center;
+main .row
+{
+    height: 100vh;
+    display: flex;
 }
 
-main form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 70px;
+main .row .columns:nth-child(1)
+{
+    margin-top: 220px;
 }
 
-main form input[type="email"] {
-  background-color: transparent;
-  border: 2px solid #D8D8D8;
-  border-radius: 4px;
-  width: 335px;
+main .row .columns:nth-child(1) p {
+  font-weight: 300;
+}
+
+main .row .columns:nth-child(2)
+{
+    margin-bottom: 80px;
+}
+
+main form
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 70px;
+}
+
+main form input[type="email"]
+{
+    background-color: transparent;
+    border: 2px solid #D8D8D8;
+    border-radius: 4px;
+    width: 335px;
+    height: 48px;
+    text-align: center;
+    font-size: 18px;
+}
+
+.orange-button
+{
+    background-color: #E44207;
+    box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.50);
+    border-radius: 4px;
+    padding: 10px 0;
+    font-weight: 700;
+    font-size: 24px;
+    transition: all 0.2s ease-out;
+}
+
+.orange-button:hover
+{
+    background-color: #FF661B;
+}
+
+main .orange-button {
+    width: 335px;
+    margin-top: 20px;
+}
+
+.triangle-border
+{
+    width: 172px;
+    position: relative;
+    padding: 5px;
+    margin: 20px auto;
+    border: 1px solid #fff;
+    color: #fff;
+    background: rgba(0, 0, 0, 0) !important;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 100px;
+    font-size: 16px;
+    font-style: italic;
+    font-weight: 700;
+    text-align: center;
+    transition: all 0.2s ease-out;
+}
+
+.triangle-border:before
+{
+    content: "";
+    position: absolute;
+    bottom: -15px;
+    left: 65px;
+    border-width: 15px 15px 0;
+    border-style: solid;
+    border-color: #fff transparent;
+    display: block;
+    width: 0;
+}
+
+.triangle-border:hover {
+  color: #000;
+  background: #fff !important;
+  cursor: pointer;
+}
+
+#how-it-works .orange-button {
+  width: 250px;
   height: 48px;
-  text-align: center;
-  font-size: 18px;
+  color: #fff;
 }
 
-main button {
-  background: #E44207;
-  box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.50);
-  border-radius: 4px;
-  width: 335px;
-  padding: 10px 0;
-  font-weight: 800;
-  font-size: 24px;
+#how-it-works h1 {
+  font-size: 36px;
+  font-weight: 600;
+  color: #4A4A4A;
+  text-align: center;
+  padding: 40px 0;
+  text-transform: capitalize;
+}
+
+#how-it-works p {
+  font-size: 18px;
+  font-weight: 600;
+  color: #4A4A4A;
+  text-align: center;
+  margin: 40px 0;
 }
