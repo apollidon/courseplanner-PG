@@ -2469,6 +2469,7 @@ select
     padding-right: 1.5rem;
 }
 
+
 @media screen and (min-width: 0\0)
 {
     select
@@ -4009,7 +4010,6 @@ select[multiple]
     margin-bottom: 1rem;
     overflow: hidden;
 }
-
 
 .flex-video iframe,
   .flex-video object,

@@ -17,13 +17,13 @@
         <header>
             <div class="row">
                 <div class="columns medium-6">
-                    <div id="logo">Course
+                    <div id="logo" data-pg-collapsed>Course
                         <span>Planner</span>
                         <span>WP</span>
                     </div>
                 </div>
                 <div class="medium-6 columns">
-                    <nav>
+                    <nav data-pg-collapsed>
                         <ul class="menu align-right">
                             <li>
                                 <a href="#">how it works</a>
@@ -55,7 +55,7 @@
             </div>
         </main>
         <section id="how-it-works">
-            <div class="row">
+            <div class="row" data-pg-collapsed>
                 <div class="columns medium-12">
                     <h1>Pellentesque sed sapien lorem at lacinia urna</h1>
                     <div class="row align-center">
@@ -70,7 +70,7 @@
                 </div>
             </div>
         </section>
-        <div id="faq">
+        <div id="faq" data-pg-collapsed>
             <h2 class="text-center">ANSWERS TO FREQUENTLY ASKED QUESTIONS…</h2>
             <div class="row">
                 <div class="medium-4 columns">
@@ -90,45 +90,59 @@
                 </div>
             </div>
         </div>
-        <div id="contact">
-            <form>
+        <div id="contact" data-pg-collapsed>
+            <form data-pg-collapsed>
                 <div class="row">
                     <div class="columns large-10 large-offset-1">
                         <h3 class="text-center">Contact Us</h3>
                         <div class="row">
                             <div class="columns large-6">
-                                <label>Input Label
-                                    <input type="text" placeholder="large-4.columns" />
-                                </label>
+                                <input type="text" placeholder="name" />
+                                <input type="text" placeholder="email" />
+                                <select>
+                                    <option value="husker">interested in</option>
+                                    <option value="starbuck">Starbuck</option>
+                                    <option value="hotdog">Hot Dog</option>
+                                    <option value="apollo">Apollo</option>
+                                </select>
                             </div>
                             <div class="columns large-6">
-                                <label>Textarea Label
-                                    <textarea placeholder="small-12.columns"></textarea>
-                                </label>
-                            </div>
-                            <div class="columns large-6">
-                                <label>Input Label
-                                    <input type="text" placeholder="large-4.columns" />
-                                </label>
-                            </div>
-                            <div class="columns large-6">
-                                <label>Select Box
-                                    <select>
-                                        <option value="husker">Husker</option>
-                                        <option value="starbuck">Starbuck</option>
-                                        <option value="hotdog">Hot Dog</option>
-                                        <option value="apollo">Apollo</option>
-                                    </select>
-                                </label>
-                            </div>
-                            <div class="columns large-6">
+                                <textarea placeholder="comments"></textarea>
                                 <button class="orange-button">Submit</button>
-                            </div>                             
+                            </div>
                         </div>
                     </div>
                 </div>
             </form>
         </div>
+        <footer>
+            <div class="row">
+                <div class="columns medium-3">
+                    <div id="logo">Course
+                        <span>Planner</span>
+                        <span>WP</span>
+                    </div>
+                </div>
+                <div class="columns medium-6 text-center" data-pg-collapsed>
+                    <p>©2016 Apollidon Learning® LLC, Tampa, FL. All rights reserved.</p>
+                </div>
+                <div class="columns medium-3">
+                    <nav data-pg-collapsed>
+                        <ul class="menu align-right">
+                            <li>
+                                <a href="#">how it works</a>
+                            </li>
+                            <li>
+                                <a href="#">faq</a>
+                            </li>
+                            <li>
+                                <a href="#">contact us</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </footer>
         <script src="js/vendor/jquery.min.js"></script>
         <script src="js/foundation.min.js"></script>
         <script>

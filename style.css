@@ -1,4 +1,12 @@
+/* not using at the moment */
+/*@font-face {
+  font-family: 'foundation-icons';
+  src:  url('fonts/foundation-icons/foundation-icons.woff') format('woff'),
+        url('fonts/foundation-icons/foundation-icons.eot') format('eot'),
+        url('fonts/foundation-icons/foundation-icons.ttf') format('ttf'),
+        url('fonts/foundation-icons/foundation-icons.svg') format('svg');
 
+}*/
 
 body
 {
@@ -246,20 +254,91 @@ main .orange-button
     margin-top: 40px;
 }
 
+#contact {
+    padding: 60px 0 30px;
+}
+
+#contact h3 {
+    font-size: 24px;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #4A4A4A;
+    margin-bottom: 40px;
+}
+
 #contact form .orange-button {
     width: 100%;
     heigth: 40px;
     color: #fff;
+    padding: 8px;
 }
 
 #contact form input,
-#contact form textarea {
+#contact form textarea,
+#contact form select {
+  font-size: 18px;
+  font-weight: 600;
+  color: #8E8E8E;
   height: 40px;
   background: #D8D8D8;
   box-shadow: inset 0px 0px 4px 0px rgba(0,0,0,0.50);
   border-radius: 4px;
+  margin-bottom: 30px;
 }
 
 #contact form textarea {
     min-height: 110px;
+}
+
+#contact form select {
+  font-size: 18px;
+  font-weight: 600;
+  color: #8E8E8E;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' width='36' height='28' viewBox='0 0 26 20'><polygon points='0,0 32,0 16,24' style='fill: rgb%28138, 138, 138%29'></polygon></svg>");
+  -webkit-background-size: 9px 6px;
+  background-size: 9px 6px;
+  background-position: right -1rem center;
+  -webkit-background-origin: content-box;
+  background-origin: content-box;
+  background-repeat: no-repeat;
+}
+
+#contact ::-webkit-input-placeholder {
+  font-size: 18px;
+  font-weight: 600;
+  color: #8E8E8E;
+}
+
+#contact :-moz-placeholder { /* Firefox 18- */
+  font-size: 18px;
+  font-weight: 600;
+  color: #8E8E8E;
+}
+
+#contact ::-moz-placeholder {  /* Firefox 19+ */
+  font-size: 18px;
+  font-weight: 600;
+  color: #8E8E8E;
+}
+
+#contact :-ms-input-placeholder {
+  font-size: 18px;
+  font-weight: 600;
+  color: #8E8E8E;
+}
+
+footer {
+  font-size: 14px;
+  color: #fff;
+  background-color: #4A4A4A;
+}
+
+footer p {
+  padding-top: 28px;
+}
+
+footer nav .menu {
+  font-size: 14px;
+  font-weight: 700;
+  color: #fff;
 }
