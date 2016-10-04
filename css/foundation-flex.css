@@ -2469,7 +2469,6 @@ select
     padding-right: 1.5rem;
 }
 
-
 @media screen and (min-width: 0\0)
 {
     select
@@ -3494,6 +3493,7 @@ select[multiple]
     width: 20px;
     height: 16px;
 }
+
 
 .menu-icon::after
 {
