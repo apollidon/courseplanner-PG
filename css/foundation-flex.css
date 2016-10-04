@@ -3292,6 +3292,7 @@ select[multiple]
     flex-wrap: wrap;
 }
 
+
 .menu.vertical > li
 {
     -webkit-box-flex: 0;
@@ -3493,7 +3494,6 @@ select[multiple]
     width: 20px;
     height: 16px;
 }
-
 
 .menu-icon::after
 {

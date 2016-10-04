@@ -6,6 +6,8 @@
         <title>Course Planner WP</title>
         <!-- Style Sheets -->
         <link rel="stylesheet" href="css/foundation-flex.css" />
+        <!-- MOTION UI -->
+        <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/motion-ui/1.1.1/motion-ui.min.css" />-->
         <link rel="stylesheet" href="style.css" />
         <!-- Scripts -->
         <script src="js/vendor/modernizr.js"></script>
@@ -16,7 +18,7 @@
     <body>
         <header>
             <div class="row">
-                <div class="columns medium-6">
+                <div class="columns medium-6 hide-for-small-only">
                     <div id="logo">Course
                         <span>Planner</span>
                         <span>WP</span>
@@ -24,11 +26,14 @@
                 </div>
                 <div class="medium-6 columns">
                     <div class="title-bar" data-responsive-toggle="main-menu" data-hide-for="medium">
+                        <div id="logo">Course
+                            <span>Planner</span>
+                            <span>WP</span>
+                        </div>
                         <button class="menu-icon" type="button" data-toggle></button>
-                        <div class="title-bar-title">Menu</div>
                     </div>
                     <nav id="main-menu">
-                        <ul class="menu align-right">
+                        <ul class="menu align-right sm-vertical">
                             <li>
                                 <a href="#">how it works</a>
                             </li>
