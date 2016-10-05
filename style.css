@@ -20,7 +20,8 @@ body
 
 header
 {
-    background-color: #F2F2F2;
+    background-color: #fff;
+    border-bottom: 2px solid rgba(155,154,155,0.40);
 }
 
 h2
@@ -37,8 +38,8 @@ a
 
 #logo
 {
-
-    font-weight: 300;
+    color: #4A4A4A;
+    font-weight: 500;
     font-family: 'roboto slab', sans-serif;
     font-size: 20px;
     text-transform: uppercase;
@@ -47,6 +48,7 @@ a
 
 #logo span
 {
+    color: #0069A5;
     margin-left: -5px;
 }
 
@@ -58,10 +60,6 @@ a
 #logo span:nth-child(2)
 {
     font-weight: 100;
-}
-
-header #logo {
-    color: #4a4a4a;
 }
 
 .menu
@@ -394,8 +392,8 @@ main .orange-button
 footer
 {
     font-size: 14px;
-    color: #fff;
-    background-color: #4A4A4A;
+    color: #4A4A4A;
+    background-color: #D8D8D8;
 }
 
 footer p
