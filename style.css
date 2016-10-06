@@ -48,7 +48,7 @@ a
 
 #logo span
 {
-    color: #0069A5;
+    color: #0069A6;
     margin-left: -5px;
 }
 
@@ -64,20 +64,28 @@ a
 
 .menu
 {
-    margin-top: 20px;
+    height: auto;
     font-size: 14px;
     font-weight: 600;
     color: #4A4A4A;
     text-transform: uppercase;
 }
 
-.menu li {
+.menu li
+{
     margin-right: 20px;
+}
+
+.menu li a
+{
+    padding-top: 25px;
+    border-top: 5px solid transparent;
 }
 
 .menu a:hover
 {
     color: #8E8E8E;
+    border-top-color: #E44207;
 }
 
 .title-bar {
@@ -108,7 +116,8 @@ a
     height: 16px;
 }
 
-.menu-icon::after {
+.menu-icon::after
+{
     content: '';
     position: absolute;
     display: block;
@@ -124,11 +133,11 @@ a
 main
 {
     height: 100vh;
-    background-image: url('img/main-bg.jpg');
+    background-image: url('img/artboard-2trig-bg.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    color: #fff;
+    color: #4A4A4A;
 }
 
 main h2
@@ -150,17 +159,23 @@ main .row
 
 main .row .columns:nth-child(1)
 {
-    margin-top: 220px;
 }
 
 main .row .columns:nth-child(1) p
 {
+    margin-top: 40px;
     font-weight: 300;
 }
 
 main .row .columns:nth-child(2)
 {
     margin-bottom: 80px;
+}
+
+main .row .columns img
+{
+    width: 546px;
+    height: auto;
 }
 
 main form
@@ -191,6 +206,7 @@ main form input[type="email"]
     font-weight: 700;
     font-size: 24px;
     transition: all 0.2s ease-out;
+    color: #fff;
 }
 
 .orange-button:hover
@@ -201,7 +217,7 @@ main form input[type="email"]
 main .orange-button
 {
     width: 335px;
-    margin-top: 20px;
+    margin-top: 40px;
 }
 
 .triangle-border
@@ -276,8 +292,8 @@ main .orange-button
 
 #faq
 {
-    color: #fff;
-    background-image: url('img/faq-bg.jpg');
+    color: #4A4A4A;
+    background-image: url('img/trigblue-bg.jpg');
     padding: 60px 0;
     background-repeat: no-repeat;
     background-position: center;
@@ -422,18 +438,17 @@ footer nav .menu
     {
         padding: 0 20px 20px;
     }
-
     .menu.sm-vertical
     {
         display: block;
     }
-
-    .menu.sm-vertical li {
+    .menu.sm-vertical li
+    {
         border-bottom: 1px dashed #000;
         padding: 10px 10px 10px 0;
     }
-
-    .menu.sm-vertical li:last-child {
+    .menu.sm-vertical li:last-child
+    {
         border-bottom: none;
     }
 }
