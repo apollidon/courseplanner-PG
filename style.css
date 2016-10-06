@@ -49,7 +49,6 @@ a
 #logo span
 {
     color: #0069A6;
-    margin-left: -5px;
 }
 
 #logo span:first-child
@@ -64,12 +63,12 @@ a
 
 .menu
 {
-    height: auto;
     font-size: 14px;
     font-weight: 600;
     color: #4A4A4A;
     text-transform: uppercase;
 }
+
 
 .menu li
 {
@@ -86,6 +85,19 @@ a
 {
     color: #8E8E8E;
     border-top-color: #E44207;
+}
+
+.menu .active > a
+{
+    color: #8E8E8E;
+    border-top-color: #E44207;
+    background: transparent;
+}
+
+.top-bar,
+  .top-bar ul
+{
+    background-color: transparent;
 }
 
 .title-bar {
@@ -130,7 +142,7 @@ a
     box-shadow: 0 7px 0 #4A4A4A, 0 14px 0 #4A4A4A;
 }
 
-main
+#main
 {
     height: 100vh;
     background-image: url('img/artboard-2trig-bg.jpg');
@@ -140,45 +152,45 @@ main
     color: #4A4A4A;
 }
 
-main h2
+#main h2
 {
     font-size: 48px;
     font-weight: bold;
 }
 
-main p
+#main p
 {
     font-size: 24px;
 }
 
-main .row
+#main .row
 {
     height: 100vh;
     display: flex;
 }
 
-main .row .columns:nth-child(1)
+#main .row .columns:nth-child(1)
 {
 }
 
-main .row .columns:nth-child(1) p
+#main .row .columns:nth-child(1) p
 {
     margin-top: 40px;
     font-weight: 300;
 }
 
-main .row .columns:nth-child(2)
+#main .row .columns:nth-child(2)
 {
     margin-bottom: 80px;
 }
 
-main .row .columns img
+#main .row .columns img
 {
     width: 546px;
     height: auto;
 }
 
-main form
+#main form
 {
     display: flex;
     flex-direction: column;
@@ -186,7 +198,7 @@ main form
     margin-top: 70px;
 }
 
-main form input[type="email"]
+#main form input[type="email"]
 {
     background-color: transparent;
     border: 2px solid #D8D8D8;
@@ -214,7 +226,7 @@ main form input[type="email"]
     background-color: #FF661B;
 }
 
-main .orange-button
+#main .orange-button
 {
     width: 335px;
     margin-top: 40px;
