@@ -69,7 +69,6 @@ a
     text-transform: uppercase;
 }
 
-
 .menu li
 {
     margin-right: 20px;
@@ -77,8 +76,8 @@ a
 
 .menu li a
 {
-    padding-top: 25px;
     border-top: 5px solid transparent;
+    padding-top: 24px;
 }
 
 .menu a:hover
@@ -97,7 +96,22 @@ a
 .top-bar,
   .top-bar ul
 {
-    background-color: transparent;
+    background-color: #fff;
+    padding: 0px;
+}
+
+.dropdown.menu.medium-horizontal > li.is-dropdown-submenu-parent > a::after
+{
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    border: inset 5px;
+    border-color: #0069A6 transparent transparent;
+    border-top-style: solid;
+    border-bottom-width: 0;
+    right: 5px;
+    margin-top: 3px;
 }
 
 .title-bar {
@@ -144,7 +158,7 @@ a
 
 #main
 {
-    height: 100vh;
+    height: auto;
     background-image: url('img/artboard-2trig-bg.jpg');
     background-repeat: no-repeat;
     background-position: center;
@@ -165,8 +179,9 @@ a
 
 #main .row
 {
-    height: 100vh;
+    padding: 80px 0;
     display: flex;
+    overflow: hidden;
 }
 
 #main .row .columns:nth-child(1)
@@ -336,8 +351,9 @@ a
 
 #contact
 {
-    padding: 60px 0 30px;
+    padding: 40px 0 30px;
 }
+
 
 #contact h3
 {
@@ -464,3 +480,4 @@ footer nav .menu
         border-bottom: none;
     }
 }
+
