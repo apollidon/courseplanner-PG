@@ -10,7 +10,7 @@
         <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/motion-ui/1.1.1/motion-ui.min.css" />-->
         <link rel="stylesheet" href="style.css" type="" />
         <!-- Scripts -->
-        <script src="js/vendor/modernizr.js"></script>
+        <script src="js/modernizr.js"></script>
         <!-- Google Fonts -->
         <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700">
         <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Raleway:400,500,600,700,800">
@@ -77,22 +77,25 @@
             <section id="how-it-works">
                 <div class="row">
                     <div class="columns medium-12">
-                        <h1>Pellentesque sed sapien lorem at lacinia urna</h1>
                         <div class="row align-center">
-                            <div class="columns medium-8">
-                                <div class="flex-video widescreen">
-                                    <video width="640" height="360" controls>
-                                        <source src="wp-content/themes/courseplanner/assets/CourseplanningWalkthrough.mp4" type="video/mp4">
-                                        <!-- <source src="assets/courseplannerDemo.ogg" type="video/ogg"> -->
-                                        Your browser does not support the video tag.
-                                    </video>
-                                    <!-- <iframe width="640" height="360" src="assets/courseplannerDemo.mp4" frameborder="0" allowfullscreen></iframe> -->
-                                </div>
-                                <p>Pellentesque sed sapien lorem, at lacinia urna. In hac habitasse platea dictumst. Vivamus vel justo in leo laoreet ullamcorper non vitae lorem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin bibendum ullamcorper rutrum. </p>
-                                <button class="orange-button float-center">Request Demo</button>
+                            <div class="columns medium-10">
+                                <article wp-post-class wp-the-id wp-loop>
+                                    <h1 wp-the-title>Pellentesque sed sapien lorem at lacinia urna</h1>
+                                    <div class="flex-video widescreen">
+                                        <video width="640" height="360" controls>
+                                            <source src="wp-content/themes/courseplanner/assets/CourseplanningWalkthrough.mp4" type="video/mp4">
+                                            <!-- <source src="assets/courseplannerDemo.ogg" type="video/ogg"> -->
+                                            Your browser does not support the video tag.
+                                        </video>
+                                        <!-- <iframe width="640" height="360" src="assets/courseplannerDemo.mp4" frameborder="0" allowfullscreen></iframe> -->
+                                    </div>
+                                    <p wp-the-content>Pellentesque sed sapien lorem, at lacinia urna. In hac habitasse platea dictumst. Vivamus vel justo in leo laoreet ullamcorper non vitae lorem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin bibendum ullamcorper rutrum. </p>
+                                    <button class="orange-button float-center">Request Demo</button>
+                                </article>
                             </div>
                         </div>
                     </div>
+                    <!-- .column end -->
                 </div>
             </section>
             <section id="faq">
@@ -112,7 +115,7 @@
                     </div>
                 </div>
             </section>
-            <section id="contact" wp-register-sidebar="Contact Area" wp-register-sidebar-id="contact_area" wp-dynamic-sidebar="contact_area" wp-register-sidebar-before="<div class=&quot;row&quot;><div class=&quot;columns medium-10 medium-offset-1&quot;>" wp-register-sidebar-after="</div></div>" wp-register-sidebar-before-title="<h3 class=&quot;widgettitle text-center&quot;>">
+            <section id="contact">
                 <form>
                     <div class="row">
                         <div class="columns medium-10 medium-offset-1">
@@ -150,8 +153,10 @@
                 </div>
             </div>
         </footer>
-        <script src="js/vendor/jquery.min.js"></script>
+        <script src="js/jquery.min.js"></script>
+        <script src="js/what-input.min.js"></script>
         <script src="js/foundation.min.js"></script>
+        <script src="js/app.js"></script>
         <script src="js/scroll.js"></script>
         <script>
       $(document).foundation();
