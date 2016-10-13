@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js" lang="en" wp-site wp-site-theme-name="CoursePlanner" wp-site-theme-slug="courseplanner" wp-site-themes-folder="/Users/henrysanchez/Documents/Hosts/courseplanner-WP/wp-content/themes/courseplanner" wp-site-preview-url="http://courseplanner-wp" wp-site-master-page="index.html">
+<html class="no-js" lang="en" wp-site wp-site-theme-name="CoursePlanner" wp-site-theme-slug="courseplanner" wp-site-themes-folder="/Users/henrysanchez/Documents/Hosts/courseplanner-WP/wp-content/themes/courseplanner" wp-site-preview-url="http://courseplanner-wp" wp-site-master-page="index.html" wp-page-template="Frontpage">
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -10,7 +10,7 @@
         <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/motion-ui/1.1.1/motion-ui.min.css" />-->
         <link rel="stylesheet" href="style.css" type="" />
         <!-- Scripts -->
-        <script src="js/vendor/modernizr.js"></script>
+        <script src="js/modernizr.js"></script>
         <!-- Google Fonts -->
         <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700">
         <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Raleway:400,500,600,700,800">
@@ -20,14 +20,13 @@
             <div class="row">
                 <div class="columns medium-6 hide-for-small-only">
                     <div id="logo">
-                        Course
-                        <span>Planner</span>WP
+                        <a wp-href="url">Course<span>Planner</span>WP</a>
                     </div>
                 </div>
                 <div class="medium-6 columns">
                     <div class="title-bar hide-for-medium" data-responsive-toggle="main-menu" data-hide-for="medium">
-                        <div id="logo">Course
-                            <span>Planner</span>WP
+                        <div id="logo">
+                            <a wp-href="url">Course<span>Planner</span>WP</a>
                         </div>
                         <button class="menu-icon" type="button" data-toggle></button>
                     </div>
@@ -64,42 +63,49 @@
             </div>
         </header>
         <main wp-site-content>
-            <section id="main" wp-cz-section="main_area_settings" wp-cz-section-title="Main Area Settings" wp-cz-control="main_bkg" wp-cz-control-label="Main Background Image" wp-cz-control-type="media" wp-cz-control-mime-type="image" wp-cz-control-section="main_area_settings" wp-attachment-bck wp-attachment-bck-theme-mod="main_bkg" wp-attachment-bck-size="large">
+            <section id="main">
                 <div class="row">
                     <div class="columns align-self-middle text-center">
-                        <h2 class="text-center" wp-cz-control="main_title" wp-cz-control-label="Main Title" wp-cz-control-default="Pellentesque Sed Sapien Lorem" wp-cz-control-section="main_area_settings" wp-cz-control-input-placeholder="Main Title" wp-cz-theme-mod="main_title" wp-cz-control-2="main_title_color" wp-cz-control-label-2="Main Title Color" wp-cz-control-type-2="color" wp-cz-control-section-2="main_area_settings" wp-cz-theme-mod-style="main_title_color" wp-cz-theme-mod-style-set-style="color">404.php</h2>
-                        <p class="text-center" wp-cz-control="main_subheading" wp-cz-control-label="Main Sub-Heading" wp-cz-control-section="main_area_settings" wp-cz-control-input-placeholder="Pellentesque sed sapien lorem at lacinia urna" wp-cz-theme-mod="main_subheading" wp-cz-control-2="main_subheading_color" wp-cz-control-label-2="Sub-Heading Color" wp-cz-control-type-2="color" wp-cz-theme-mod-style="main_subheading_color" wp-cz-theme-mod-style-set-style="color" wp-cz-control-section-2="main_area_settings">Pellentesque sed sapien lorem at lacinia urna.</p>
+                        <h2 class="text-center">Page not Found :(</h2>
+                        <p class="text-center">We did not find what you are looking for.</p>
                     </div>
                 </div>
             </section>
-            <section id="how-it-works">
-                <div class="row">
-                    <div class="columns medium-12">
-                        <h1>Pellentesque sed sapien lorem at lacinia urna</h1>
-                        <div class="row align-center">
-                            <div class="columns medium-8">
-                                <div class="flex-video widescreen">
-                                    <iframe width="640" height="360" src="https://www.youtube.com/embed/qZKvZzRynLE?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
-                                </div>
-                                <p>Pellentesque sed sapien lorem, at lacinia urna. In hac habitasse platea dictumst. Vivamus vel justo in leo laoreet ullamcorper non vitae lorem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin bibendum ullamcorper rutrum. </p>
-                                <button class="orange-button float-center">Request Demo</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section id="faq">
+            <section id="faq" wp-post-type="faq_posts" wp-post-type-name="FAQ" wp-post-type-name-singular="faq" wp-post-type-description="FAQ" wp-post-type-supports="title,author,editor,thumbnail,excerpt" wp-post-type-has-archive="true" wp-post-type-show-in-menu="true" wp-post-type-menu-icon="dashicons-format-chat" wp-post-type-public="true" wp-post-type-hierarchical="true">
                 <h2 class="text-center">ANSWERS TO FREQUENTLY ASKED QUESTIONS…</h2>
                 <div class="row">
-                    <div class="medium-4 columns small-12 text-center medium-text-left">
+                    <php>
+                    $args = array( 'post_type' => 'faq_posts', 'posts_per_page' => 6 );
+                    $loop = new WP_Query( $args );
+                    while ( $loop->have_posts() ) : $loop->the_post();
+                    
+                      echo '<div class="medium-4 columns small-12 text-center medium-text-left">';
+                    	echo '<h3>'; the_title(); echo '</h3>';
+                      	the_content();
+                      echo '</div>';
+                    endwhile;
+                    </php>
+                    <div class="medium-4 columns small-12 text-center medium-text-left" wp-no-export>
                         <h3>Do you offer a free trial?</h3>
                         <p>Proin suscipit luctus orci placerat fringilla. Donec hendrerit laoreet risus eget adipiscing. Suspendisse in urna ligula, a volutpat mauris. Sed enim mi, bibendum eu pulvinar vel, sodales vitae dui. Pellentesque sed sapien lorem, at lacinia urna. In hac habitasse platea dictumst.</p>
                     </div>
-                    <div class="medium-4 columns small-12 text-center medium-text-left">
+                    <div class="medium-4 columns small-12 text-center medium-text-left" wp-no-export>
                         <h3>Can I use on more than one website?</h3>
                         <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
                     </div>
-                    <div class="medium-4 columns small-12 text-center medium-text-left">
+                    <div class="medium-4 columns small-12 text-center medium-text-left" wp-no-export>
+                        <h3>Do you provide free updates?</h3>
+                        <p>Proin suscipit luctus orci placerat fringilla. Donec hendrerit laoreet risus eget adipiscing. Suspendisse in urna ligula, a volutpat mauris. Sed enim mi, bibendum eu pulvinar vel, sodales vitae dui.</p>
+                    </div>
+                    <div class="medium-4 columns small-12 text-center medium-text-left" wp-no-export>
+                        <h3>Do you provide free updates?</h3>
+                        <p>Proin suscipit luctus orci placerat fringilla. Donec hendrerit laoreet risus eget adipiscing. Suspendisse in urna ligula, a volutpat mauris. Sed enim mi, bibendum eu pulvinar vel, sodales vitae dui.</p>
+                    </div>
+                    <div class="medium-4 columns small-12 text-center medium-text-left" wp-no-export>
+                        <h3>Do you provide free updates?</h3>
+                        <p>Proin suscipit luctus orci placerat fringilla. Donec hendrerit laoreet risus eget adipiscing. Suspendisse in urna ligula, a volutpat mauris. Sed enim mi, bibendum eu pulvinar vel, sodales vitae dui.</p>
+                    </div>
+                    <div class="medium-4 columns small-12 text-center medium-text-left" wp-no-export>
                         <h3>Do you provide free updates?</h3>
                         <p>Proin suscipit luctus orci placerat fringilla. Donec hendrerit laoreet risus eget adipiscing. Suspendisse in urna ligula, a volutpat mauris. Sed enim mi, bibendum eu pulvinar vel, sodales vitae dui.</p>
                     </div>
@@ -143,8 +149,10 @@
                 </div>
             </div>
         </footer>
-        <script src="js/vendor/jquery.min.js"></script>
+        <script src="js/jquery.min.js"></script>
+        <script src="js/what-input.min.js"></script>
         <script src="js/foundation.min.js"></script>
+        <script src="js/app.js"></script>
         <script src="js/scroll.js"></script>
         <script>
       $(document).foundation();

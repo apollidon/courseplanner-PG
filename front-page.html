@@ -96,13 +96,14 @@
                 </div>
             </section>
             <section id="faq" wp-post-type="faq_posts" wp-post-type-name="FAQ" wp-post-type-name-singular="faq" wp-post-type-description="FAQ" wp-post-type-supports="title,author,editor,thumbnail,excerpt" wp-post-type-has-archive="true" wp-post-type-show-in-menu="true" wp-post-type-menu-icon="dashicons-format-chat" wp-post-type-public="true" wp-post-type-hierarchical="true">
-                <h2 class="text-center">ANSWERS TO FREQUENTLY ASKED QUESTIONS…</h2>
+                <h2 class="text-center">The Benefits of Course Planner WP
+</h2>
                 <div class="row">
                     <php>
                     $args = array( 'post_type' => 'faq_posts', 'posts_per_page' => 6 );
                     $loop = new WP_Query( $args );
                     while ( $loop->have_posts() ) : $loop->the_post();
-                    
+
                       echo '<div class="medium-4 columns small-12 text-center medium-text-left">';
                     	echo '<h3>'; the_title(); echo '</h3>';
                       	the_content();
@@ -136,27 +137,34 @@
                 </div>
             </section>
             <section id="contact">
-                <form>
+                <form class="request_demo" action="
+http://marketing.apollidon.com/l/63232/2016-10-12/33fnwh">
                     <div class="row">
                         <div class="columns medium-10 medium-offset-1">
                             <h3 class="text-center">Contact Us</h3>
                             <div class="row">
                                 <div class="columns small-12 medium-6">
-                                    <input type="text" name="name" placeholder="*name" pattern="[a-zA-Z\s]{1,}" title="Please only use letters" required="" />
-                                    <input type="email" name="email" placeholder="*email" required="" />
-                                    <select>
+                                    <input id="first" type="text" name="first_name" placeholder="First Name*" pattern="[a-zA-Z\s]{1,}" title="Please only use letters" required="" />
+                                    <input id="last" type="text" name="last_name" placeholder="Last Name*" pattern="[a-zA-Z\s]{1,}" title="Please only use letters" required="" />
+                                    <input id="email" type="email" name="email" placeholder="Email*" required="" />
+                                    <!--<select>
                                         <option value="husker">interested in</option>
-                                        <option value="starbuck">Starbuck</option>
-                                        <option value="hotdog">Hot Dog</option>
-                                        <option value="apollo">Apollo</option>
-                                    </select>
+                                        <option value="starbuck" data-pg-id="81">Starbuck</option>
+                                        <option value="hotdog" data-pg-id="82">Hot Dog</option>
+                                        <option value="apollo" data-pg-id="83">Apollo</option>
+                                    </select>-->
                                 </div>
                                 <div class="columns small-12 medium-6">
-                                    <textarea placeholder="* comments" required=""></textarea>
+                                    <textarea id="message" name="message" placeholder="Message*" required=""></textarea>
                                     <button class="orange-button">Submit</button>
                                 </div>
                             </div>
                         </div>
+                    </div>
+                    <div class="clear"></div>
+                    <div style="position:absolute; left:-9999px; top: -9999px;">
+                        <label for="pardot_extra_field">Comments</label>
+                        <input type="text" id="pardot_extra_field" name="pardot_extra_field">
                     </div>
                 </form>
             </section>
@@ -178,6 +186,9 @@
         <script src="js/foundation.min.js"></script>
         <script src="js/app.js"></script>
         <script src="js/scroll.js"></script>
+        <script src="js/form_validation/call-validate.js"></script>
+        <script src="js/form_validation/form-clear.js"></script>
+        <script src="js/form_validation/jquery.validate.min.js"></script>
         <script>
       $(document).foundation();
     </script>
