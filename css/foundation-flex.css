@@ -3292,7 +3292,6 @@ select[multiple]
     flex-wrap: wrap;
 }
 
-
 .menu.vertical > li
 {
     -webkit-box-flex: 0;
@@ -5441,6 +5440,7 @@ table.hover tr:nth-of-type(even):hover
 {
     background-color: #e6e6e6;
 }
+
 
 .top-bar input
 {

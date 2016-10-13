@@ -20,7 +20,8 @@ body
 
 header
 {
-    background-color: #F2F2F2;
+    background-color: #fff;
+    border-bottom: 2px solid rgba(155,154,155,0.40);
 }
 
 h2
@@ -37,8 +38,8 @@ a
 
 #logo
 {
-
-    font-weight: 300;
+    color: #4A4A4A;
+    font-weight: 500;
     font-family: 'roboto slab', sans-serif;
     font-size: 20px;
     text-transform: uppercase;
@@ -47,7 +48,7 @@ a
 
 #logo span
 {
-    margin-left: -5px;
+    color: #0069A6;
 }
 
 #logo span:first-child
@@ -60,26 +61,61 @@ a
     font-weight: 100;
 }
 
-header #logo {
-    color: #4a4a4a;
+#logo a:hover {
+    color: #E44207;
 }
 
 .menu
 {
-    margin-top: 20px;
     font-size: 14px;
     font-weight: 600;
     color: #4A4A4A;
     text-transform: uppercase;
 }
 
-.menu li {
+.menu li
+{
     margin-right: 20px;
 }
 
-.menu a:hover
+.menu li a
+{
+    border-top: 5px solid transparent;
+    padding-top: 24px;
+}
+
+.menu li a:hover
 {
     color: #8E8E8E;
+    border-top-color: #E44207;
+}
+
+.menu .active > a
+{
+    color: #8E8E8E;
+    border-top-color: #E44207;
+    background: transparent;
+}
+
+.top-bar,
+  .top-bar ul
+{
+    background-color: #fff;
+    padding: 0px;
+}
+
+.dropdown.menu.medium-horizontal > li.is-dropdown-submenu-parent > a::after
+{
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    border: inset 5px;
+    border-color: #0069A6 transparent transparent;
+    border-top-style: solid;
+    border-bottom-width: 0;
+    right: 5px;
+    margin-top: 3px;
 }
 
 .title-bar {
@@ -110,7 +146,8 @@ header #logo {
     height: 16px;
 }
 
-.menu-icon::after {
+.menu-icon::after
+{
     content: '';
     position: absolute;
     display: block;
@@ -123,49 +160,59 @@ header #logo {
     box-shadow: 0 7px 0 #4A4A4A, 0 14px 0 #4A4A4A;
 }
 
-main
+#main
 {
-    height: 100vh;
-    background-image: url('img/main-bg.jpg');
+    height: auto;
+    background-image: url('img/artboard-2trig-bg.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    color: #fff;
+    color: #4A4A4A;
+    border-bottom: 2px solid rgba(155,154,155,0.40);
 }
 
-main h2
+#main h2
 {
     font-size: 48px;
     font-weight: bold;
 }
 
-main p
+#main p
 {
     font-size: 24px;
 }
 
-main .row
+#main .row
 {
-    height: 100vh;
+    padding: 60px 0;
     display: flex;
+    overflow: hidden;
 }
 
-main .row .columns:nth-child(1)
+#main .row .columns:nth-child(1)
 {
-    margin-top: 220px;
 }
 
-main .row .columns:nth-child(1) p
+#main .row .columns:nth-child(1) p
 {
+    margin-top: 30px;
+    margin-bottom: 0px;
     font-weight: 300;
 }
 
-main .row .columns:nth-child(2)
+
+#main .row .columns:nth-child(2)
 {
     margin-bottom: 80px;
 }
 
-main form
+#main .row .columns img
+{
+    width: 889px;
+    height: auto;
+}
+
+#main form
 {
     display: flex;
     flex-direction: column;
@@ -173,7 +220,7 @@ main form
     margin-top: 70px;
 }
 
-main form input[type="email"]
+#main form input[type="email"]
 {
     background-color: transparent;
     border: 2px solid #D8D8D8;
@@ -193,6 +240,7 @@ main form input[type="email"]
     font-weight: 700;
     font-size: 24px;
     transition: all 0.2s ease-out;
+    color: #fff;
 }
 
 .orange-button:hover
@@ -200,7 +248,7 @@ main form input[type="email"]
     background-color: #FF661B;
 }
 
-main .orange-button
+#main .orange-button
 {
     width: 335px;
     margin-top: 20px;
@@ -276,19 +324,27 @@ main .orange-button
     margin: 40px 0;
 }
 
+.flex-video video {
+    border-top: 2px solid rgba(155,154,155,0.40);
+    border-bottom: 2px solid rgba(155,154,155,0.40);
+}
+
 #faq
 {
-    color: #fff;
-    background-image: url('img/faq-bg.jpg');
-    padding: 60px 0;
+    color: #4A4A4A;
+    background-image: url('img/trigblue-bg.jpg');
+    padding: 60px 0 30px;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    border-top: 2px solid rgba(155,154,155,0.40);
+    border-bottom: 2px solid rgba(155,154,155,0.40);
 }
 
 #faq h2
 {
     padding: 20px 0 60px 0;
+    text-transform: uppercase;
 }
 
 #faq h3
@@ -296,11 +352,16 @@ main .orange-button
     font-size: 18px;
     font-weight: 600;
     margin-bottom: 25px;
+    text-align: center;
+}
+
+#faq p {
+    font-size: 18px;
 }
 
 #faq .row .columns
 {
-    padding: 0 20px;
+    padding: 0 20px 30px;
 }
 
 #faq .triangle-border
@@ -310,7 +371,7 @@ main .orange-button
 
 #contact
 {
-    padding: 60px 0 30px;
+    padding: 40px 0 30px;
 }
 
 #contact h3
@@ -338,7 +399,7 @@ main .orange-button
     font-weight: 600;
     color: #8E8E8E;
     height: 40px;
-    background: #D8D8D8;
+    background: #F6F6F6;
     box-shadow: inset 0px 0px 4px 0px rgba(0,0,0,0.50);
     border-radius: 4px;
     margin-bottom: 30px;
@@ -391,11 +452,43 @@ main .orange-button
     color: #8E8E8E;
 }
 
+#contact form input.orange-button
+{
+    background-color: #E44207;
+    box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.50);
+    border-radius: 4px;
+    padding: 0px 0;
+    font-weight: 700;
+    font-size: 24px;
+    transition: all 0.2s ease-out;
+    color: #fff;
+}
+
+#contact form input.orange-button:hover
+{
+    background-color: #FF661B;
+}
+
+#contact .error {
+    border: 1px solid red;
+}
+
+.caldera-grid .form-control
+{
+    padding: 0px 24px 0px 16px;
+}
+
+.caldera-grid textarea.form-control
+{
+    padding-top: 8px;
+}
+
 footer
 {
     font-size: 14px;
-    color: #fff;
-    background-color: #4A4A4A;
+    color: #4A4A4A;
+    background-color: #F6F6F6;
+    border-top: 2px solid rgba(155,154,155,0.40);
 }
 
 footer p
@@ -425,17 +518,24 @@ footer nav .menu
         padding: 0 20px 20px;
     }
 
-    .menu.sm-vertical
+    .menu li
     {
-        display: block;
-    }
-
-    .menu.sm-vertical li {
+        margin: 0 auto;
         border-bottom: 1px dashed #000;
-        padding: 10px 10px 10px 0;
+        /*padding: 0px 0px 0px 0px;*/
     }
 
-    .menu.sm-vertical li:last-child {
+    .menu li a {
+
+        padding: 20px 0px 20px 10px;
+    }
+
+    .menu li:last-child
+    {
         border-bottom: none;
     }
+
+
+
+
 }
