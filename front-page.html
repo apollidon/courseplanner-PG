@@ -96,14 +96,13 @@
                 </div>
             </section>
             <section id="faq" wp-post-type="faq_posts" wp-post-type-name="FAQ" wp-post-type-name-singular="faq" wp-post-type-description="FAQ" wp-post-type-supports="title,author,editor,thumbnail,excerpt" wp-post-type-has-archive="true" wp-post-type-show-in-menu="true" wp-post-type-menu-icon="dashicons-format-chat" wp-post-type-public="true" wp-post-type-hierarchical="true">
-                <h2 class="text-center">The Benefits of Course Planner WP
-</h2>
+                <h2 class="text-center">The Benefits of Course Planner WP</h2>
                 <div class="row">
                     <php>
                     $args = array( 'post_type' => 'faq_posts', 'posts_per_page' => 6 );
                     $loop = new WP_Query( $args );
                     while ( $loop->have_posts() ) : $loop->the_post();
-
+                    
                       echo '<div class="medium-4 columns small-12 text-center medium-text-left">';
                     	echo '<h3>'; the_title(); echo '</h3>';
                       	the_content();
@@ -149,9 +148,9 @@ http://marketing.apollidon.com/l/63232/2016-10-12/33fnwh">
                                     <input id="email" type="email" name="email" placeholder="Email*" required="" />
                                     <!--<select>
                                         <option value="husker">interested in</option>
-                                        <option value="starbuck" data-pg-id="81">Starbuck</option>
-                                        <option value="hotdog" data-pg-id="82">Hot Dog</option>
-                                        <option value="apollo" data-pg-id="83">Apollo</option>
+                                        <option value="starbuck">Starbuck</option>
+                                        <option value="hotdog">Hot Dog</option>
+                                        <option value="apollo">Apollo</option>
                                     </select>-->
                                 </div>
                                 <div class="columns small-12 medium-6">
