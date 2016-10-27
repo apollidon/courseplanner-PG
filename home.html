@@ -20,14 +20,13 @@
             <div class="row">
                 <div class="columns medium-6 hide-for-small-only">
                     <div id="logo">
-                        Course
-                        <span>Planner</span>WP
+                        <a wp-href="url">Course<span>Planner</span>WP</a>
                     </div>
                 </div>
                 <div class="medium-6 columns">
                     <div class="title-bar hide-for-medium" data-responsive-toggle="main-menu" data-hide-for="medium">
-                        <div id="logo">Course
-                            <span>Planner</span>WP
+                        <div id="logo">
+                            <a wp-href="url">Course<span>Planner</span>WP</a>
                         </div>
                         <button class="menu-icon" type="button" data-toggle></button>
                     </div>
@@ -37,10 +36,10 @@
                                 <a href="#how-it-works">how it works</a>
                             </li>
                             <li>
-                                <a href="#faq">FAQ</a>
+                                <a href="#faq">Benefits</a>
                             </li>
                             <li>
-                                <a href="#contact">CONTACT US</a>
+                                <a href="#contact">contact us</a>
                             </li>
                             <!-- A dropdown in case we need it -->
                             <!-- <li class="is-dropdown-submenu-parent opens-right">
@@ -67,10 +66,11 @@
             <section id="main" wp-cz-section="main_area_settings" wp-cz-section-title="Main Area Settings" wp-cz-control="main_bkg" wp-cz-control-label="Main Background Image" wp-cz-control-type="media" wp-cz-control-mime-type="image" wp-cz-control-section="main_area_settings" wp-attachment-bck wp-attachment-bck-theme-mod="main_bkg" wp-attachment-bck-size="large">
                 <div class="row">
                     <div class="columns align-self-middle text-center">
-                        <img src="img/Course-Planner-Boring.png" />
                         <p class="text-center" wp-cz-control="main_subheading" wp-cz-control-label="Main Sub-Heading" wp-cz-control-section="main_area_settings" wp-cz-control-input-placeholder="Pellentesque sed sapien lorem at lacinia urna" wp-cz-theme-mod="main_subheading" wp-cz-control-2="main_subheading_color" wp-cz-control-label-2="Sub-Heading Color" wp-cz-control-type-2="color" wp-cz-theme-mod-style="main_subheading_color" wp-cz-theme-mod-style-set-style="color" wp-cz-control-section-2="main_area_settings">Pellentesque sed sapien lorem at lacinia urna.</p>
                         <h2 class="text-center" wp-cz-control="main_title" wp-cz-control-label="Main Title" wp-cz-control-default="Pellentesque Sed Sapien Lorem" wp-cz-control-section="main_area_settings" wp-cz-control-input-placeholder="Main Title" wp-cz-theme-mod="main_title" wp-cz-control-2="main_title_color" wp-cz-control-label-2="Main Title Color" wp-cz-control-type-2="color" wp-cz-control-section-2="main_area_settings" wp-cz-theme-mod-style="main_title_color" wp-cz-theme-mod-style-set-style="color">Pellentesque Sed Sapien Lorem</h2>
-                        <button class="orange-button" wp-cz-control="main_button" wp-cz-control-label="Main Button" wp-cz-control-section="main_area_settings" wp-cz-theme-mod="main_button" wp-cz-control-2="main_button_color" wp-cz-control-label-2="Main Button Color" wp-cz-control-type-2="color" wp-cz-control-section-2="main_area_settings" wp-cz-theme-mod-style="main_button_color" wp-cz-theme-mod-style-set-style="background-color">Request Demo</button>
+                        <a href="#contact">
+                            <button class="orange-button" wp-cz-control="main_button" wp-cz-control-label="Main Button" wp-cz-control-section="main_area_settings" wp-cz-theme-mod="main_button" wp-cz-control-2="main_button_color" wp-cz-control-label-2="Main Button Color" wp-cz-control-type-2="color" wp-cz-control-section-2="main_area_settings" wp-cz-theme-mod-style="main_button_color" wp-cz-theme-mod-style-set-style="background-color">Request Demo</button>
+                        </a>
                     </div>
                 </div>
             </section>
@@ -89,7 +89,9 @@
                                     <!-- <iframe width="640" height="360" src="assets/courseplannerDemo.mp4" frameborder="0" allowfullscreen></iframe> -->
                                 </div>
                                 <p>Pellentesque sed sapien lorem, at lacinia urna. In hac habitasse platea dictumst. Vivamus vel justo in leo laoreet ullamcorper non vitae lorem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin bibendum ullamcorper rutrum. </p>
-                                <button class="orange-button float-center">Request Demo</button>
+                                <a href="#contact">
+                                    <button class="orange-button float-center">Request Demo</button>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -113,27 +115,34 @@
                 </div>
             </section>
             <section id="contact">
-                <form>
+                <form class="request_demo" action="
+http://marketing.apollidon.com/l/63232/2016-10-12/33fnwh" data-pg-collapsed wp-include-template-part wp-include-template-part-slug="contact" wp-include-template-part-name="form">
                     <div class="row">
                         <div class="columns medium-10 medium-offset-1">
                             <h3 class="text-center">Contact Us</h3>
                             <div class="row">
                                 <div class="columns small-12 medium-6">
-                                    <input type="text" name="name" placeholder="*name" pattern="[a-zA-Z\s]{1,}" title="Please only use letters" required="" />
-                                    <input type="email" name="email" placeholder="*email" required="" />
-                                    <select>
+                                    <input id="first" type="text" name="first_name" placeholder="First Name*" pattern="[a-zA-Z\s]{1,}" title="Please only use letters" required="" />
+                                    <input id="last" type="text" name="last_name" placeholder="Last Name*" pattern="[a-zA-Z\s]{1,}" title="Please only use letters" required="" />
+                                    <input id="email" type="email" name="email" placeholder="Email*" required="" />
+                                    <!--<select>
                                         <option value="husker">interested in</option>
                                         <option value="starbuck">Starbuck</option>
                                         <option value="hotdog">Hot Dog</option>
                                         <option value="apollo">Apollo</option>
-                                    </select>
+                                    </select>-->
                                 </div>
                                 <div class="columns small-12 medium-6">
-                                    <textarea placeholder="* comments" required=""></textarea>
+                                    <textarea id="message" name="message" placeholder="Message"></textarea>
                                     <button class="orange-button">Submit</button>
                                 </div>
                             </div>
                         </div>
+                    </div>
+                    <div class="clear"></div>
+                    <div style="position:absolute; left:-9999px; top: -9999px;">
+                        <label for="pardot_extra_field">Comments</label>
+                        <input type="text" id="pardot_extra_field" name="pardot_extra_field">
                     </div>
                 </form>
             </section>
@@ -141,8 +150,8 @@
         <footer>
             <div class="row">
                 <div class="columns medium-6">
-                    <div id="logo">Course
-                        <span>Planner</span>WP
+                    <div id="logo">
+                        <a wp-href="url">Course<span>Planner</span>WP</a>
                     </div>
                 </div>
                 <div class="columns text-center medium-6 medium-text-right">

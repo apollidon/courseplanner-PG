@@ -20,14 +20,13 @@
             <div class="row">
                 <div class="columns medium-6 hide-for-small-only">
                     <div id="logo">
-                        Course
-                        <span>Planner</span>WP
+                        <a wp-href="url">Course<span>Planner</span>WP</a>
                     </div>
                 </div>
                 <div class="medium-6 columns">
                     <div class="title-bar hide-for-medium" data-responsive-toggle="main-menu" data-hide-for="medium">
-                        <div id="logo">Course
-                            <span>Planner</span>WP
+                        <div id="logo">
+                            <a wp-href="url">Course<span>Planner</span>WP</a>
                         </div>
                         <button class="menu-icon" type="button" data-toggle></button>
                     </div>
@@ -37,10 +36,10 @@
                                 <a href="#how-it-works">how it works</a>
                             </li>
                             <li>
-                                <a href="#faq">FAQ</a>
+                                <a href="#faq">Benefits</a>
                             </li>
                             <li>
-                                <a href="#contact">CONTACT US</a>
+                                <a href="#contact">contact us</a>
                             </li>
                             <!-- A dropdown in case we need it -->
                             <!-- <li class="is-dropdown-submenu-parent opens-right">
@@ -87,7 +86,7 @@
                     $args = array( 'post_type' => 'faq_posts', 'posts_per_page' => 6 );
                     $loop = new WP_Query( $args );
                     while ( $loop->have_posts() ) : $loop->the_post();
-
+                    
                       echo '<div class="medium-4 columns small-12 text-center medium-text-left">';
                     	echo '<h3>'; the_title(); echo '</h3>';
                       	the_content();
@@ -120,44 +119,14 @@
                     </div>
                 </div>
             </section>
-            <section id="contact">
-                <form class="request_demo" action="
-http://marketing.apollidon.com/l/63232/2016-10-12/33fnwh">
-                    <div class="row">
-                        <div class="columns medium-10 medium-offset-1">
-                            <h3 class="text-center">Contact Us</h3>
-                            <div class="row">
-                                <div class="columns small-12 medium-6">
-                                    <input id="first" type="text" name="first_name" placeholder="First Name*" pattern="[a-zA-Z\s]{1,}" title="Please only use letters" required="" />
-                                    <input id="last" type="text" name="last_name" placeholder="Last Name*" pattern="[a-zA-Z\s]{1,}" title="Please only use letters" required="" />
-                                    <input id="email" type="email" name="email" placeholder="Email*" required="" />
-                                    <!--<select>
-                                        <option value="husker">interested in</option>
-                                        <option value="starbuck">Starbuck</option>
-                                        <option value="hotdog">Hot Dog</option>
-                                        <option value="apollo">Apollo</option>
-                                    </select>-->
-                                </div>
-                                <div class="columns small-12 medium-6">
-                                    <textarea id="message" name="message" placeholder="Message*" required=""></textarea>
-                                    <button class="orange-button">Submit</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="clear"></div>
-                    <div style="position:absolute; left:-9999px; top: -9999px;">
-                        <label for="pardot_extra_field">Comments</label>
-                        <input type="text" id="pardot_extra_field" name="pardot_extra_field">
-                    </div>
-                </form>
-            </section>
+            <section id="contact" wp-include-template-part wp-include-template-part-slug="contact" wp-include-template-part-name="form" wp-include-template-part-set="content">
+</section>
         </main>
         <footer>
             <div class="row">
                 <div class="columns medium-6">
-                    <div id="logo">Course
-                        <span>Planner</span>WP
+                    <div id="logo">
+                        <a wp-href="url">Course<span>Planner</span>WP</a>
                     </div>
                 </div>
                 <div class="columns text-center medium-6 medium-text-right">
@@ -170,9 +139,6 @@ http://marketing.apollidon.com/l/63232/2016-10-12/33fnwh">
         <script src="js/foundation.min.js"></script>
         <script src="js/app.js"></script>
         <script src="js/scroll.js"></script>
-        <script src="js/form_validation/call-validate.js"></script>
-        <script src="js/form_validation/form-clear.js"></script>
-        <script src="js/form_validation/jquery.validate.min.js"></script>
         <script>
       $(document).foundation();
     </script>

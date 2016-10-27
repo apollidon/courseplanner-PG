@@ -20,14 +20,13 @@
             <div class="row">
                 <div class="columns medium-6 hide-for-small-only">
                     <div id="logo">
-                        Course
-                        <span>Planner</span>WP
+                        <a wp-href="url">Course<span>Planner</span>WP</a>
                     </div>
                 </div>
                 <div class="medium-6 columns">
                     <div class="title-bar hide-for-medium" data-responsive-toggle="main-menu" data-hide-for="medium">
-                        <div id="logo">Course
-                            <span>Planner</span>WP
+                        <div id="logo">
+                            <a wp-href="url">Course<span>Planner</span>WP</a>
                         </div>
                         <button class="menu-icon" type="button" data-toggle></button>
                     </div>
@@ -37,10 +36,10 @@
                                 <a href="#how-it-works">how it works</a>
                             </li>
                             <li>
-                                <a href="#faq">FAQ</a>
+                                <a href="#faq">Benefits</a>
                             </li>
                             <li>
-                                <a href="#contact">CONTACT US</a>
+                                <a href="#contact">contact us</a>
                             </li>
                             <!-- A dropdown in case we need it -->
                             <!-- <li class="is-dropdown-submenu-parent opens-right">
@@ -67,10 +66,8 @@
             <section id="main" wp-cz-section="main_area_settings" wp-cz-section-title="Main Area Settings" wp-cz-control="main_bkg" wp-cz-control-label="Main Background Image" wp-cz-control-type="media" wp-cz-control-mime-type="image" wp-cz-control-section="main_area_settings" wp-attachment-bck wp-attachment-bck-theme-mod="main_bkg" wp-attachment-bck-size="large">
                 <div class="row">
                     <div class="columns align-self-middle text-center">
-                        <img src="img/Course-Planner-Boring.png" />
                         <p class="text-center" wp-cz-control="main_subheading" wp-cz-control-label="Main Sub-Heading" wp-cz-control-section="main_area_settings" wp-cz-control-input-placeholder="Pellentesque sed sapien lorem at lacinia urna" wp-cz-theme-mod="main_subheading" wp-cz-control-2="main_subheading_color" wp-cz-control-label-2="Sub-Heading Color" wp-cz-control-type-2="color" wp-cz-theme-mod-style="main_subheading_color" wp-cz-theme-mod-style-set-style="color" wp-cz-control-section-2="main_area_settings">Pellentesque sed sapien lorem at lacinia urna.</p>
                         <h2 class="text-center" wp-cz-control="main_title" wp-cz-control-label="Main Title" wp-cz-control-default="Pellentesque Sed Sapien Lorem" wp-cz-control-section="main_area_settings" wp-cz-control-input-placeholder="Main Title" wp-cz-theme-mod="main_title" wp-cz-control-2="main_title_color" wp-cz-control-label-2="Main Title Color" wp-cz-control-type-2="color" wp-cz-control-section-2="main_area_settings" wp-cz-theme-mod-style="main_title_color" wp-cz-theme-mod-style-set-style="color">Pellentesque Sed Sapien Lorem</h2>
-                        <button class="orange-button" wp-cz-control="main_button" wp-cz-control-label="Main Button" wp-cz-control-section="main_area_settings" wp-cz-theme-mod="main_button" wp-cz-control-2="main_button_color" wp-cz-control-label-2="Main Button Color" wp-cz-control-type-2="color" wp-cz-control-section-2="main_area_settings" wp-cz-theme-mod-style="main_button_color" wp-cz-theme-mod-style-set-style="background-color">Request Demo</button>
                     </div>
                 </div>
             </section>
@@ -102,7 +99,7 @@
                     $args = array( 'post_type' => 'faq_posts', 'posts_per_page' => 6 );
                     $loop = new WP_Query( $args );
                     while ( $loop->have_posts() ) : $loop->the_post();
-                    
+
                       echo '<div class="medium-4 columns small-12 text-center medium-text-left">';
                     	echo '<h3>'; the_title(); echo '</h3>';
                       	the_content();
@@ -137,7 +134,7 @@
             </section>
             <section id="contact">
                 <form class="request_demo" action="
-http://marketing.apollidon.com/l/63232/2016-10-12/33fnwh">
+http://marketing.apollidon.com/l/63232/2016-10-12/33fnwh" data-pg-collapsed wp-include-template-part wp-include-template-part-slug="contact" wp-include-template-part-name="form">
                     <div class="row">
                         <div class="columns medium-10 medium-offset-1">
                             <h3 class="text-center">Contact Us</h3>
@@ -149,12 +146,12 @@ http://marketing.apollidon.com/l/63232/2016-10-12/33fnwh">
                                     <!--<select>
                                         <option value="husker">interested in</option>
                                         <option value="starbuck">Starbuck</option>
-                                        <option value="hotdog" data-pg-id="82">Hot Dog</option>
-                                        <option value="apollo" data-pg-id="83">Apollo</option>
+                                        <option value="hotdog">Hot Dog</option>
+                                        <option value="apollo">Apollo</option>
                                     </select>-->
                                 </div>
                                 <div class="columns small-12 medium-6">
-                                    <textarea id="message" name="message" placeholder="Message*" required=""></textarea>
+                                    <textarea id="message" name="message" placeholder="Message"></textarea>
                                     <button class="orange-button">Submit</button>
                                 </div>
                             </div>
@@ -171,8 +168,8 @@ http://marketing.apollidon.com/l/63232/2016-10-12/33fnwh">
         <footer>
             <div class="row">
                 <div class="columns medium-6">
-                    <div id="logo">Course
-                        <span>Planner</span>WP
+                    <div id="logo">
+                        <a wp-href="url">Course<span>Planner</span>WP</a>
                     </div>
                 </div>
                 <div class="columns text-center medium-6 medium-text-right">
@@ -185,9 +182,6 @@ http://marketing.apollidon.com/l/63232/2016-10-12/33fnwh">
         <script src="js/foundation.min.js"></script>
         <script src="js/app.js"></script>
         <script src="js/scroll.js"></script>
-        <script src="js/form_validation/call-validate.js"></script>
-        <script src="js/form_validation/form-clear.js"></script>
-        <script src="js/form_validation/jquery.validate.min.js"></script>
         <script>
       $(document).foundation();
     </script>
